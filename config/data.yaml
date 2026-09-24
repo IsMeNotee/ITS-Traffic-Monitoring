@@ -1,0 +1,15 @@
+# Đường dẫn dữ liệu
+path: D:/Code/Final_CV/dataset/dataset_final  
+train: images/train
+val: images/val
+test: images/test
+
+# Số lượng và tên các lớp (Classes)
+nc: 6
+names:
+  0: Fire_Truck
+  1: Ambulance
+  2: Police_Car
+  3: Warning_Light
+  4: 4_Wheel_Vehicle
+  5: 2_Wheel_Vehicle

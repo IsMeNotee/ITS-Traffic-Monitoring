@@ -1,0 +1,25 @@
+# Cấu hình siêu tham số (Hyperparameters) cho mô hình Đề xuất (YOLOv8 Small Optimized)
+# Sử dụng kỹ thuật Transfer Learning và Data Augmentation chống chịu môi trường
+training_config:
+  epochs: 100
+  batch_size: 4
+  imgsz: 640
+  optimizer: "AdamW"
+  lr0: 0.001
+  weight_decay: 0.0005
+  cos_lr: True
+  freeze_layers: 10
+
+data_augmentation:
+  erasing: 0.4        # Chống camera dính bụi
+  degrees: 15.0       # Chống camera rung lắc
+  shear: 2.0
+  perspective: 0.0001
+  hsv_h: 0.015
+  hsv_s: 0.7
+  hsv_v: 0.4          # Xử lý điều kiện thiếu sáng/chạng vạng ban đêm
+  translate: 0.1
+  scale: 0.5
+  fliplr: 0.5
+  mosaic: 1.0
+  flipud: 0.0         # Tắt lật ngược (Xe không đi lộn ngược)

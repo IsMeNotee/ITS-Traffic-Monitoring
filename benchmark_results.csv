@@ -1,0 +1,4 @@
+Model Name,,Avg Latency,Actual FPS
+YOLOv8 Nano,,54.76,13.3
+YOLOv8 Small,,69.32,11.18
+Proposed_Model,,69.4,11.15

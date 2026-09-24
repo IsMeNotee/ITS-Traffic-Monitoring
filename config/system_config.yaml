@@ -1,0 +1,33 @@
+# =================================================================
+# 1. Cấu hình vùng nhận diện và giám sát ngã tư (Tọa độ đa giác)
+# =================================================================
+roi:
+  # Vùng Hoạt Động (Xanh lá) - Bao trọn lòng đường để lọc nhiễu vỉa hè/xe ngược chiều
+  active_area: 
+    - [0, 617]
+    - [0, 1077]
+    - [1459, 1077]
+    - [1919, 500]
+    - [1171, 309]
+  
+  # Vùng Vi Phạm (Vàng) - Khu vực ngay sau vạch dừng để bắt lỗi vượt đèn đỏ
+  intersection_area: 
+    - [1171, 308]
+    - [1919, 500]
+    - [1833, 613]
+    - [984, 380]
+
+# =================================================================
+# 2. Cấu hình Logic thời gian Đèn giao thông (Đơn vị: Giây)
+# =================================================================
+traffic_logic:
+  default_green_time: 65       # Để 65s Xanh (Sát với 68s thực tế, trừ 3s cho đèn Vàng)
+  yellow_clearance_time: 3     # Đèn Vàng 3 giây
+  all_red_clearance_time: 15   # 15s Đèn Đỏ như bạn đo được
+  emergency_priority_time: 10
+
+# =================================================================
+# 3. Định nghĩa ID của các phương tiện ưu tiên từ mô hình YOLO
+# =================================================================
+classes:
+  emergency_ids: [0, 1, 2, 3] # Fire_Truck(0), Ambulance(1), Police_Car(2), Warning_Light(3)

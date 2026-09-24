@@ -1,0 +1,17 @@
+# FILE CẤU HÌNH KẾT HỢP - KHÔNG CHẠM VÀO DATA CŨ
+# Truyền mảng gồm cả đường dẫn cũ và đường dẫn bạn vừa làm
+train: 
+  - D:\Code\Final_CV\dataset\dataset_final\images\train       # Thư mục ảnh gốc (được bảo toàn)
+  - D:\Code\Final_CV\dataset\auto_label\images  # Thư mục ảnh bạn vừa gán nhãn xong
+
+# Giữ nguyên tập val cũ để đánh giá độ chính xác khách quan
+val: D:\Code\Final_CV\dataset\dataset_final\images\val
+
+nc: 6
+names:
+  0: Fire_Truck
+  1: Ambulance
+  2: Police_Car
+  3: Warning_Light
+  4: 4_Wheel_Vehicle
+  5: 2_Wheel_Vehicle
